@@ -79,14 +79,41 @@ h6 {
   cursor: pointer;
   transition: 0.8s all;
 }
-.safe__button:hover, .invest__button:hover, .intro__button:hover, .signup:hover {
-  color: #933FFE;
-  border: 0.1rem solid white;
-  background: none;
+
+a {
+  position: relative;
+}
+
+a:before {
+  content: "";
+  bottom: -0.4rem;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%);
+  transition: 0.5s;
+}
+
+a:hover:before {
+  width: 100%;
 }
 
 html {
   font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(199, 199, 199);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(13, 0, 37), rgb(36, 1, 192));
+  border-radius: 4px;
 }
 
 body {
@@ -133,6 +160,7 @@ button {
   margin-left: 3.2rem;
   transition: 0.5s all;
   display: inline-block;
+  position: relative;
 }
 .nav__item a:hover {
   color: #933FFE;
@@ -227,6 +255,16 @@ button {
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
+  transition: all 0.5s;
+}
+.card__button:hover {
+  color: white;
+}
+.card__button:before {
+  left: 23%;
+}
+.card__button:hover:before {
+  width: 53%;
 }
 
 .iconify {
@@ -374,6 +412,16 @@ path {
   color: #B982FF;
   display: flex;
   justify-content: center;
+  transition: all 0.5s;
+}
+.industry__button:hover {
+  color: white;
+}
+.industry__button:before {
+  left: 44.5%;
+}
+.industry__button:hover:before {
+  width: 10%;
 }
 .industry__table {
   position: relative;
@@ -422,6 +470,9 @@ path {
   align-items: center;
   width: 11.4rem;
   transition: all 0.4s linear;
+}
+.industry__link:hover {
+  color: #B982FF;
 }
 .industry__icon {
   color: white;
